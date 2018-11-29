@@ -1,0 +1,9 @@
+<div class = sum> <p>There are <%= @contacts.count %> contacts.</p> </div>
+  <ul class = names>
+  <% @contacts.each do |contact| %>
+  <li> <a href="/contacts/<%=contact.id%>"><%= contact.first_name%> <%=contact.last_name%> (<%= contact.email%>)</a>
+    <div><a href="#">Edit</a> | <a href="#">Delete</a> </div>
+  </li>
+      <% end %>
+    </ul>
+    
